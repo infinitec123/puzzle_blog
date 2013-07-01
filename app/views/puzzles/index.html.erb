@@ -1,0 +1,23 @@
+<h1>Puzzles</h1>
+ 
+<table>
+  <tr>
+    <th>Puzzle</th>
+    <th>Difficulty</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+ 
+  <% @puzzles.each do |puzzle| %>
+    <tr>
+      <td><%= puzzle.title %></td>
+      <td><%= puzzle.difficulty %></td>
+      <td><%= link_to 'Show', puzzle %></td>
+      <td><%= link_to 'Edit', edit_puzzle_path(puzzle) %></td>
+      <td><%= link_to 'Delete', puzzle_path(puzzle),
+                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+<br>
