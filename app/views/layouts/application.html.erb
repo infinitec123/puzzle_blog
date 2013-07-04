@@ -1,14 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PuzzleBlog</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+<title>PuzzleBlog</title>
+<%= stylesheet_link_tag "application", :media => "all" %> 
+<%= javascript_include_tag "application" %>
+<%= csrf_meta_tags %>
 </head>
-<body>
 
-<%= yield %>
+
+<body class='<%= controller.controller_name %>'>
+
+<div class="container">
+
+<header>
+
+<div id="banner">
+	<%= image_tag("logo.jpg") %>
+	<%= @page_title || "Puzzles Blog" %>
+
+	<nav id="round"> 
+		<ul>
+			<li><%= link_to "Home", root_path%></li>
+			<li><a href="#">Help</a></li>  
+			<li><a href="#">Sign In</a></li>
+		</ul> 
+	</nav
+
+</div>
+
+
+
+</header>
+
+<br />
+<br />
+<br />
+
+
+
+	<div id="main"> 
+		<%= yield %>
+    </div>
+
+
+</div>
 
 </body>
 </html>

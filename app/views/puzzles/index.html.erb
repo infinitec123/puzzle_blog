@@ -1,27 +1,32 @@
-<h1>Puzzles</h1>
+
+
  
 <table>
-  <tr>
-    <th>Puzzle</th>
-    <th>Difficulty</th>
-    <th>Image</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
  
   <% @puzzles.each do |puzzle| %>
-    <tr>
-      <td><%= puzzle.title %></td>
-      <td><%= puzzle.difficulty %></td>
-      <td><%= puzzle.image_url %></td>
-      <td><%= link_to 'Show', puzzle %></td>
-      <td><%= link_to 'Edit', edit_puzzle_path(puzzle) %></td>
-      <td><%= link_to 'Delete', puzzle_path(puzzle),
-                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  <% end %>
-</table>
-<br>
+    
+    <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+    
+    <td>
+      <%= image_tag(puzzle.image_url, class: 'list_image') %> 
+    </td>
 
-<%= link_to 'Add a Puzzle', new_puzzle_path %>
+
+    <td class="list_description"> 
+      <dl>
+        <dt><%= link_to puzzle.title, puzzle %></dt>
+        <dd><%= truncate(strip_tags(puzzle.question), length: 100) %></dd>
+      </dl> 
+    </td>
+
+    <td class="list_actions">
+      <%= link_to 'Edit', edit_puzzle_path(puzzle) %><br/> 
+      <%= link_to 'Delete', puzzle, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </td>
+  </tr>
+<% end %> 
+</table>
+<br />
+
+<%= link_to 'Add puzzle', new_puzzle_path %>
+
