@@ -9,10 +9,12 @@
   }
 
   .list_image {
-    width:  70px;
-    height: 70px;
+    width:  150px;
+    height: 150px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+    vertical-align: center;
+
   }
 
   .list_description {
@@ -36,14 +38,17 @@
   .list_actions {
     font-size:    x-medium;
     text-align:   right;
-    padding-left: 1em;
+    padding-left: 2em;
+    vertical-align: text-
   }
 
   .list_line_even {
     background:   #23ac87;
+    height: 150px;
   }
   .list_line_odd {
-    background:   #9c9;   
+    background:   #9c9;  
+    height: 150px; 
   }
 
 showimage {

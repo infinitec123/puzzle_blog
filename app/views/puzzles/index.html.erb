@@ -1,5 +1,7 @@
 
-
+<% if notice %>
+<p id="notice"><%= notice %></p> 
+<% end %>
  
 <table>
  
@@ -15,7 +17,7 @@
     <td class="list_description"> 
       <dl>
         <dt><%= link_to puzzle.title, puzzle %></dt>
-        <dd><%= truncate(strip_tags(puzzle.question), length: 100) %></dd>
+        <dd><%= truncate(strip_tags(puzzle.question), length: 300) %></dd>
       </dl> 
     </td>
 
