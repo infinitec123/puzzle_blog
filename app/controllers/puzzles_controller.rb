@@ -46,7 +46,7 @@ class PuzzlesController < ApplicationController
 	def update
 		@puzzle = Puzzle.find(params[:id])
 
-		if @puzzle.update_attributes(params[:puzzle].permit(:title, :question, :solution, :difficulty))
+		if @puzzle.update_attributes(params[:puzzle].permit(:title, :question, :solution, :difficulty, :image_url))
 			#logger.debug "Update: Success"
 			redirect_to @puzzle
 		else 
@@ -57,7 +57,7 @@ class PuzzlesController < ApplicationController
 
   private
   def post_params
-    params.require(:puzzle).permit(:title, :question, :solution, :difficulty)
+    params.require(:puzzle).permit(:title, :question, :solution, :difficulty, :image_url)
   end
 
 end

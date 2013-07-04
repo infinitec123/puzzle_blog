@@ -4,6 +4,7 @@
   <tr>
     <th>Puzzle</th>
     <th>Difficulty</th>
+    <th>Image</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,6 +14,7 @@
     <tr>
       <td><%= puzzle.title %></td>
       <td><%= puzzle.difficulty %></td>
+      <td><%= puzzle.image_url %></td>
       <td><%= link_to 'Show', puzzle %></td>
       <td><%= link_to 'Edit', edit_puzzle_path(puzzle) %></td>
       <td><%= link_to 'Delete', puzzle_path(puzzle),
