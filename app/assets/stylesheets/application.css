@@ -35,7 +35,8 @@ header {
   text-align: center;
 
   img {
-    float: left;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
   }
 }
 
