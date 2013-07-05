@@ -6,11 +6,11 @@
 <table>
  
   <% @puzzles.each do |puzzle| %>
-    
+    <div class="entry">
     <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
     
     <td>
-      <%= image_tag(puzzle.image_url, class: 'list_image') %> 
+      <%= link_to image_tag(puzzle.image_url, class: 'list_image'), puzzle %> 
     </td>
 
 
@@ -26,9 +26,12 @@
       <%= link_to 'Delete', puzzle, method: :delete, data: { confirm: 'Are you sure?' } %>
     </td>
   </tr>
+</div>
 <% end %> 
 </table>
 <br />
 
 <%= link_to 'Add puzzle', new_puzzle_path %>
+
+<p><%= will_paginate @puzzles %></p>
 

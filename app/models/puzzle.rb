@@ -10,6 +10,9 @@ class Puzzle < ActiveRecord::Base
 
 	validates :image_url, allow_blank: true, format: { with: %r{\.(gif|jpg|png)$}i,
 		message: 'must be a URL for GIF, JPG or PNG image.'
+
+
+
   }
 
   #Still to validate difficulty

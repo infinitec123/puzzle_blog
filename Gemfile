@@ -28,6 +28,8 @@ gem 'jquery-rails'
 
 gem 'strong_parameters'
 
+gem 'will_paginate', '~> 3.0'
+
 group :production do
 	gem 'pg', '0.12.2'
 end
