@@ -1,5 +1,6 @@
 PuzzleBlog::Application.routes.draw do
   get "welcome/index"
+  get 'puzzles/forapp'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

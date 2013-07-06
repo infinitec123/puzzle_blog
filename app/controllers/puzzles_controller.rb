@@ -39,6 +39,17 @@ class PuzzlesController < ApplicationController
     	end
 	end
 
+
+  	def forapp
+  		
+  		@puzzles = Puzzle.all
+
+  		respond_to do |format|
+      		format.html # index.html.erb
+      		format.json { render json: @puzzles }
+    	end
+	end
+
 	def edit
 		@puzzle = Puzzle.find(params[:id])
 	end	
