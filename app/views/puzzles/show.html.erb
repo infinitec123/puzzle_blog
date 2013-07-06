@@ -9,13 +9,13 @@
 <p>
   <strong>Puzzle:</strong>
   <br/>
-  <%= @puzzle.question %>
+  <%= sanitize(@puzzle.question) %>
 </p>
 
 <p>
   <strong>Solution:</strong>
   <br/>
-  <%= @puzzle.solution %>
+  <%= sanitize(@puzzle.solution) %>
 </p>
 
 <p>
