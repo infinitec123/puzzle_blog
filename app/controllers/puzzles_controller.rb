@@ -31,7 +31,7 @@ class PuzzlesController < ApplicationController
 
   	def index
   		
-  		@puzzles = Puzzle.paginate(:per_page => 5, :page => params[:page]).order('created_at DESC')
+  		@puzzles = Puzzle.paginate(:per_page => 5, :page => params[:page])
 
   		respond_to do |format|
       		format.html # index.html.erb

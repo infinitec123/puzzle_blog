@@ -27,6 +27,8 @@ header {
 
 
  #banner {
+
+  height: 100px;	
   background: #9c9;
   padding: 10px;
   border-bottom: 2px solid;
@@ -37,6 +39,7 @@ header {
   img {
     -moz-border-radius: 5px;
     border-radius: 5px;
+    float: left;
   }
 }
 
@@ -57,7 +60,7 @@ nav ul {
 nav ul li { list-style-type: none; 
 	display: inline-block; 
 	padding: 0.2em 0;
-	font: small-caps 20px/20px "Times New Roman", serif;
+	font: small-caps 18px/18px "Times New Roman", serif;
 }
 
 nav ul li a { 

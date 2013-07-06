@@ -1,15 +1,11 @@
 
+<h1 class="show_title">  <%= @puzzle.title %>  </h1>
+
+
 <div class="show_image">
-  <%= image_tag(@puzzle.image_url) %>
+  <%= image_tag(@puzzle.image_url, size: "225x225") %>
 </div>
 
-
-<p>
-  <strong>Title:</strong>
-  <br/>
-  <%= @puzzle.title %>
-</p>
- 
 <p>
   <strong>Puzzle:</strong>
   <br/>
