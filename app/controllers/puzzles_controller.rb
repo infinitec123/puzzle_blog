@@ -46,7 +46,7 @@ class PuzzlesController < ApplicationController
 	def destroy
   		@puzzle = Puzzle.find(params[:id])
   		@puzzle.destroy
-  		redirect_to puzzles_pathd
+  		redirect_to puzzles_path
 	end
 
 	def update
