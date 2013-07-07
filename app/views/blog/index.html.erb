@@ -16,22 +16,13 @@
 
     <td class="list_description"> 
       <dl>
-        <dt><%= link_to puzzle.title, puzzle %></dt>
-        <dd><%= truncate(strip_tags(puzzle.question), length: 300) %></dd>
+        <dt style="margin-bottom:5px;"><%= link_to puzzle.title, puzzle %></dt>
+        <dd style="color:#faf1f1;"><%= truncate(strip_tags(puzzle.question), length: 300) %></dd>
       </dl> 
-    </td>
-
-    <td class="list_actions">
-      <%= link_to 'Edit', edit_puzzle_path(puzzle) %><br/> 
-      <%= link_to 'Delete', puzzle, method: :delete, data: { confirm: 'Are you sure?' } %>
     </td>
   </tr>
 </div>
 <% end %> 
 </table>
 <br />
-
-<%= link_to 'Add puzzle', new_puzzle_path %>
-
-
-
+<p><%= will_paginate @puzzles %></p>
