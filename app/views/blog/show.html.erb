@@ -12,9 +12,7 @@
   <%= sanitize(@puzzle.question) %>
 </p>
 
-<%= button_to_function "Show/Hide Solution", "$('#solution').toggle()" %>
-
-<p id="solution" style="display:none;">
+<p>
   <strong>Solution:</strong>
   <br/>
   <%= sanitize(@puzzle.solution) %>

@@ -11,12 +11,10 @@ class Puzzle < ActiveRecord::Base
   validates :solution, presence: true,
                     length: { minimum: 10 }   
 
+  validates :difficulty, inclusion: DIFFICULTY_LEVELS
+
+
 	validates :image_url, allow_blank: true, format: { with: %r{\.(gif|jpg|png)$}i,
-		message: 'must be a URL for GIF, JPG or PNG image.'
+		message: 'must be a URL for GIF, JPG or PNG image.' }
 
-
-
-  }
-
-  #Still to validate difficulty
 end

@@ -5,6 +5,8 @@ PuzzleBlog::Application.routes.draw do
 
   get "welcome/index"
 
+  get "blog/show"
+
 
 
   # The priority is based upon order of creation:
