@@ -36,7 +36,7 @@
 
 <div class="field">
     <%= f.label :difficulty %><br>
-    <%= f.text_field :difficulty %>
+    <%= f.select :difficulty, Puzzle::DIFFICULTY_LEVELS, prompt: 'Select a difficulty level' %>
 </div>
 <div class="actions">
     <%= f.submit %>

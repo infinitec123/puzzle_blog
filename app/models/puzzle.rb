@@ -1,4 +1,7 @@
 class Puzzle < ActiveRecord::Base
+  
+  DIFFICULTY_LEVELS = ["Easy", "Medium", "Difficult", "Tough"]
+
   attr_accessible :difficulty, :question, :solution, :title, :image_url
   # validates :title, :length => { :minimum => 5 }
   validates :title, presence: true, uniqueness: true, 
