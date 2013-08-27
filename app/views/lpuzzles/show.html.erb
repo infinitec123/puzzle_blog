@@ -1,35 +1,29 @@
-<p id="notice"><%= notice %></p>
+<h3 class="show_title">  <%= @lpuzzle.title %>  </h3>
+
+
+<div class="show_image">
+  <%= image_tag(@lpuzzle.image_url, size: "225x225") %>
+</div>
 
 <p>
-  <b>Title:</b>
-  <%= @lpuzzle.title %>
+  <strong>Puzzle:</strong>
+  <br/>
+  <%= sanitize(@lpuzzle.question) %>
+</p>
+
+<%= button_to_function "View/Hide Solution", "$('#solution').toggle()" %>
+
+<p id="solution" style="display:none;">
+  <strong>Solution:</strong>
+  <br/>
+  <%= sanitize(@lpuzzle.solution) %>
 </p>
 
 <p>
-  <b>Question:</b>
-  <%= @lpuzzle.question %>
-</p>
-
-<p>
-  <b>Solution:</b>
-  <%= @lpuzzle.solution %>
-</p>
-
-<p>
-  <b>Hint:</b>
-  <%= @lpuzzle.hint %>
-</p>
-
-<p>
-  <b>Difficulty:</b>
+  <strong>Difficulty:</strong>
+  <br/>
   <%= @lpuzzle.difficulty %>
 </p>
-
-<p>
-  <b>Image url:</b>
-  <%= @lpuzzle.image_url %>
-</p>
-
 
 <%= link_to 'Edit', edit_lpuzzle_path(@lpuzzle) %> |
 <%= link_to 'Back', lpuzzles_path %>
