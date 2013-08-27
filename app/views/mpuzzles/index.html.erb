@@ -1,0 +1,33 @@
+<h1>Listing mpuzzles</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Question</th>
+    <th>Solution</th>
+    <th>Hint</th>
+    <th>Difficulty</th>
+    <th>Image url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @mpuzzles.each do |mpuzzle| %>
+  <tr>
+    <td><%= mpuzzle.title %></td>
+    <td><%= mpuzzle.question %></td>
+    <td><%= mpuzzle.solution %></td>
+    <td><%= mpuzzle.hint %></td>
+    <td><%= mpuzzle.difficulty %></td>
+    <td><%= mpuzzle.image_url %></td>
+    <td><%= link_to 'Show', mpuzzle %></td>
+    <td><%= link_to 'Edit', edit_mpuzzle_path(mpuzzle) %></td>
+    <td><%= link_to 'Destroy', mpuzzle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Mpuzzle', new_mpuzzle_path %>

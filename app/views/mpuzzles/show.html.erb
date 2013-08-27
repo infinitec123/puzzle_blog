@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @mpuzzle.title %>
+</p>
+
+<p>
+  <b>Question:</b>
+  <%= @mpuzzle.question %>
+</p>
+
+<p>
+  <b>Solution:</b>
+  <%= @mpuzzle.solution %>
+</p>
+
+<p>
+  <b>Hint:</b>
+  <%= @mpuzzle.hint %>
+</p>
+
+<p>
+  <b>Difficulty:</b>
+  <%= @mpuzzle.difficulty %>
+</p>
+
+<p>
+  <b>Image url:</b>
+  <%= @mpuzzle.image_url %>
+</p>
+
+
+<%= link_to 'Edit', edit_mpuzzle_path(@mpuzzle) %> |
+<%= link_to 'Back', mpuzzles_path %>

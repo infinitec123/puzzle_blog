@@ -1,4 +1,7 @@
 PuzzleBlog::Application.routes.draw do
+  resources :mpuzzles
+
+
   get "blog/index"
 
   get "info/index"

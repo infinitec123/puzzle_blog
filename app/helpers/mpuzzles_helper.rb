@@ -1,0 +1,2 @@
+module MpuzzlesHelper
+end
