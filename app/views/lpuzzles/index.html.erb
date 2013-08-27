@@ -1,33 +1,35 @@
-<h1>Listing lpuzzles</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Question</th>
-    <th>Solution</th>
-    <th>Hint</th>
-    <th>Difficulty</th>
-    <th>Image url</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @lpuzzles.each do |lpuzzle| %>
-  <tr>
-    <td><%= lpuzzle.title %></td>
-    <td><%= lpuzzle.question %></td>
-    <td><%= lpuzzle.solution %></td>
-    <td><%= lpuzzle.hint %></td>
-    <td><%= lpuzzle.difficulty %></td>
-    <td><%= lpuzzle.image_url %></td>
-    <td><%= link_to 'Show', lpuzzle %></td>
-    <td><%= link_to 'Edit', edit_lpuzzle_path(lpuzzle) %></td>
-    <td><%= link_to 'Destroy', lpuzzle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<% if notice %>
+<p id="notice"><%= notice %></p> 
 <% end %>
-</table>
+ 
+<table>
+ 
+  <% @lpuzzles.each do |lpuzzle| %>
+    <div class="entry">
+    <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+    
+    <td>
+      <%= link_to image_tag(lpuzzle.image_url, class: 'list_image'), lpuzzle %> 
+    </td>
 
+
+    <td class="list_description"> 
+      <dl>
+        <dt style="margin-bottom:5px;"><%= link_to lpuzzle.title, lpuzzle %></dt>
+        <dd style="margin-bottom:5px; color:#faf1f1;"><%= truncate(strip_tags(lpuzzle.question), length: 300) %></dd>
+        <dd style="color:#400a6e;">Difficulty: <%=lpuzzle.difficulty%></dd>
+      </dl> 
+    </td>
+
+    <td class="list_actions">
+      <%= link_to 'Edit', edit_lpuzzle_path(lpuzzle) %><br/> 
+      <%= link_to 'Delete', lpuzzle, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </td>
+  </tr>
+</div>
+<% end %> 
+</table>
 <br />
 
-<%= link_to 'New Lpuzzle', new_lpuzzle_path %>
+<%= link_to 'Add another Lateral Puzzle', new_lpuzzle_path %>
