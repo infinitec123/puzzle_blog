@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @lpuzzle.title %>
+</p>
+
+<p>
+  <b>Question:</b>
+  <%= @lpuzzle.question %>
+</p>
+
+<p>
+  <b>Solution:</b>
+  <%= @lpuzzle.solution %>
+</p>
+
+<p>
+  <b>Hint:</b>
+  <%= @lpuzzle.hint %>
+</p>
+
+<p>
+  <b>Difficulty:</b>
+  <%= @lpuzzle.difficulty %>
+</p>
+
+<p>
+  <b>Image url:</b>
+  <%= @lpuzzle.image_url %>
+</p>
+
+
+<%= link_to 'Edit', edit_lpuzzle_path(@lpuzzle) %> |
+<%= link_to 'Back', lpuzzles_path %>

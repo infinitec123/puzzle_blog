@@ -1,0 +1,2 @@
+module LpuzzlesHelper
+end

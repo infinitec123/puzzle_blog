@@ -1,4 +1,7 @@
 PuzzleBlog::Application.routes.draw do
+  resources :lpuzzles
+
+
   resources :mpuzzles
 
 

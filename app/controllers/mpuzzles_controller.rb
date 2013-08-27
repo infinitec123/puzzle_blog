@@ -1,4 +1,7 @@
 class MpuzzlesController < ApplicationController
+  
+  http_basic_authenticate_with name: "admin", password: "curiosity123!", except: [:index, :show]
+
   # GET /mpuzzles
   # GET /mpuzzles.json
   def index
