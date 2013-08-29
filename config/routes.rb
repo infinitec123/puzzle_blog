@@ -67,7 +67,7 @@ PuzzleBlog::Application.routes.draw do
    
    resources :puzzles
 
-   root :to => 'blog#index'
+  # root :to => 'blog#index'
 
   # See how all your routes lay out with "rake routes"
 
