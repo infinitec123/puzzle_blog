@@ -17,7 +17,7 @@
     <td class="list_description"> 
       <dl>
         <dt style="margin-bottom:5px;"><%= link_to mpuzzle.title, mpuzzle %></dt>
-        <dd style="margin-bottom:5px; color:#faf1f1;"><%= truncate(sanitize(mpuzzle.question)), length: 300) %></dd>
+        <dd style="margin-bottom:5px; color:#faf1f1;"><%= truncate(strip_tags(mpuzzle.question), length: 300) %></dd>
         <dd style="color:#400a6e;">Difficulty: <%=mpuzzle.difficulty%></dd>
       </dl> 
     </td>
