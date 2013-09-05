@@ -5,7 +5,7 @@ class MpuzzlesController < ApplicationController
   # GET /mpuzzles
   # GET /mpuzzles.json
   def index
-    @mpuzzles = Mpuzzle.all
+    @mpuzzles = Mpuzzle.find(:all, :order => 'title')
 
     respond_to do |format|
       format.html # index.html.erb

@@ -5,7 +5,7 @@ class LpuzzlesController < ApplicationController
   # GET /lpuzzles
   # GET /lpuzzles.json
   def index
-    @lpuzzles = Lpuzzle.all
+    @lpuzzles = Lpuzzle.find(:all, :order => 'title')
 
     respond_to do |format|
       format.html # index.html.erb
